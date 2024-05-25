@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CsharpModulo3", "CsharpModulo3", "{3881EF39-1AB7-407D-992C-22AE6DE44533}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project1", "CsharpModulo3\Project1\Project1.csproj", "{07F5EFCB-34F7-4186-9794-5F3110A4700C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07F5EFCB-34F7-4186-9794-5F3110A4700C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07F5EFCB-34F7-4186-9794-5F3110A4700C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07F5EFCB-34F7-4186-9794-5F3110A4700C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07F5EFCB-34F7-4186-9794-5F3110A4700C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{07F5EFCB-34F7-4186-9794-5F3110A4700C} = {3881EF39-1AB7-407D-992C-22AE6DE44533}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5070D24E-2BA6-4EF4-BD5F-2FB7C3720D1C}
+	EndGlobalSection
+EndGlobal
