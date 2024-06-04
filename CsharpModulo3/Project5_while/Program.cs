@@ -87,7 +87,7 @@ Console.WriteLine(lifeHerói > lifeMonstro ? "Hero wins!" : "Monster wins!");
 // Add a variavel cont para ficar mais dinamico
 Console.WriteLine("--------------------------------------------------------------\n");
 
-Console.WriteLine("Exercicio");
+Console.WriteLine("Exemplo 04");
 Console.WriteLine("A instrução for: executa seu corpo enquanto uma expressão Booliana especificada (a condição) é avaliada como verdadeira.");
 Console.WriteLine("A instrução foreach: enumera os elementos de uma coleção e executa o corpo para cada um deles.");
 Console.WriteLine("A instrução do-while: executa condicionalmente o corpo uma ou mais vezes.");
@@ -103,7 +103,7 @@ Console.WriteLine("A instrução while: executa condicionalmente o corpo zero ou
 //     number++;
 // } while (number <= 5);
 
-Console.WriteLine("Ao usar uma instrução Console.ReadLine() para obter a entrada do usuário, é prática comum utilizar uma cadeia de caracteres do tipo anulável (designada string?) para a variável de entrada e, em seguida, avaliar o valor inserido pelo usuário. O código de exemplo a seguir utiliza uma cadeia de caracteres do tipo anulável para capturar a entrada do usuário. A iteração continuará enquanto o valor fornecido pelo usuário for nulo:");
+// Ao usar uma instrução Console.ReadLine() para obter a entrada do usuário, é prática comum utilizar uma cadeia de caracteres do tipo anulável (designada string?) para a variável de entrada e, em seguida, avaliar o valor inserido pelo usuário. O código de exemplo a seguir utiliza uma cadeia de caracteres do tipo anulável para capturar a entrada do usuário. A iteração continuará enquanto o valor fornecido pelo usuário for nulo:
 // A função fica aguardando o Usuario digitar algum valor
 
 // strind? readResult; // A variável readResult é do tipo anulável.
@@ -113,24 +113,120 @@ Console.WriteLine("Ao usar uma instrução Console.ReadLine() para obter a entra
 //     readResult = Console.ReadLine();
 // } while (readResult == null);
 
-string? readResult;
-bool validEntry = false;
-Console.WriteLine("Enter a string containing at least three characters:");
+// string? readResult;
+// bool validEntry = false;
+// Console.WriteLine("Enter a string containing at least three characters:");
+// do
+// {
+//     readResult = Console.ReadLine();
+//     if (readResult != null)
+//     {
+//         if (readResult.Length >= 3)
+//         {
+//             validEntry = true;
+//         }
+//         else
+//         {
+//             Console.WriteLine("Your input is invalid, please try again.");
+//         }
+//     }
+// } while (validEntry == false);
+Console.WriteLine("--------------------------------------------------------------\n");
+
+Console.WriteLine("Exemplo 05");
+// O método int.TryParse() pode ser utilizado para converter um valor de cadeia de caracteres em um número inteiro. O método utiliza dois parâmetros, uma cadeia de caracteres que será avaliada e o nome de uma variável inteira à qual será atribuído um valor. O método retorna um valor Booliano. O código de exemplo a seguir demonstra o uso do método int.TryParse():
+
+// int numericValue = 0;
+// bool validNumber = false;
+
+// validNumber = int.TryParse(readResult, out numericValue);
+
+// Se o valor da cadeia de caracteres atribuído a readResult representar um número inteiro válido, o valor será atribuído à variável de número inteiro chamada numericValue e true será atribuído à variável booliana denominada validNumber. 
+// Se o valor atribuído a readResult não representar um número inteiro válido, validNumber receberá um valor de false. Por exemplo, se readResult for igual a "7", o valor 7 será atribuído a numericValue.
+Console.WriteLine("--------------------------------------------------------------\n");
+
+Console.WriteLine("Projeto 01");
+//Escreva um código que valida a entrada de inteiro
+
+//* A solução deve incluir uma iteração do-while ou while.
+//* Antes do bloco de iteração: a solução deve usar uma instrução Console.WriteLine() para solicitar ao usuário um valor inteiro entre 5 e 10.
+//* A solução deve usar uma instrução Console.ReadLine() para obter uma entrada do usuário.
+//* A solução deve garantir que a entrada seja uma representação válida de um inteiro.
+//* Se o valor inteiro não estiver entre 5 e 10, o código deverá usar uma instrução Console.WriteLine() para solicitar ao usuário um valor inteiro entre 5 e 10.
+//* A solução deve garantir que o valor inteiro esteja entre 5 e 10 antes de sair da iteração.
+//* A solução deve usar uma instrução Console.ReadLine() para obter uma entrada do usuário.
+//* A solução deve garantir que a entrada seja uma representação válida de um inteiro.
+//* Se o valor inteiro não estiver entre 5 e 10, o código deverá usar uma instrução Console.WriteLine() para solicitar ao usuário um valor inteiro entre 5 e 10.
+//* A solução deve garantir que o valor inteiro esteja entre 5 e 10 antes de sair da iteração.
+
+string? entrada;
+bool encerrar = false;
+int number = 0;
+Console.WriteLine("Digite um numero maior 5 e menor 10: ");
 do
 {
-    readResult = Console.ReadLine();
-    if (readResult != null)
+    entrada = Console.ReadLine();
+    bool sucesso = int.TryParse(entrada, out number);
+    if (sucesso && number > 5 && number < 10)
     {
-        if (readResult.Length >= 3)
+        encerrar = true;
+    }
+    else
+    {
+        Console.WriteLine("Valor Errado, tente novamente: ");
+    }
+
+} while (encerrar == false);
+Console.WriteLine($"Parabens, O numero {number} passou!");
+Console.WriteLine("--------------------------------------------------------------\n");
+
+Console.WriteLine("Projeto 02");
+// Escrever o código que valida a entrada de cadeia de caracteres
+
+// A solução deve incluir uma iteração do-while ou while.
+// Antes do bloco de iteração: a solução deve usar uma instrução Console.WriteLine() para solicitar ao usuário um dos três nomes de função: Administrador, Gerente ou Usuário.
+// A solução deve usar uma instrução Console.ReadLine() para obter uma entrada do usuário.
+// A solução deve garantir que o valor inserido corresponda a uma das três opções de função.
+// Sua solução deve usar o método Trim() no valor de entrada para ignorar caracteres de espaço de entrelinhamento e à direita.
+// A solução deve usar o método ToLower() no valor de entrada para ignorar maiúsculas e minúsculas.
+// Se o valor inserido não corresponder a uma das opções de função, o código deverá usar uma instrução Console.WriteLine() para solicitar ao usuário uma entrada válida.
+// Abaixo (depois) do bloco de código de iteração: a solução deve usar uma instrução Console.WriteLine() para informar ao usuário que o valor de entrada foi aceito.
+
+string? entrada1;
+bool encerrar1 = false;
+
+int numero1 = 0;
+int numero2 = 0;
+int resultado = 0;
+
+do
+{
+    Random dice = new Random();
+    numero1 = dice.Next(1, 6);
+    numero2 = dice.Next(1, 6);
+
+    Console.WriteLine($"Quanto é {numero1} + {numero2} = ");
+    entrada1 = Console.ReadLine();
+    bool sucesso = int.TryParse(entrada1, out resultado);
+
+    int soma = numero1 + numero2;
+
+    if (resultado == soma)
+    {
+        Console.WriteLine($"\nParabéns, {numero1} + {numero2} = {resultado}\n");
+    }
+    else
+    {
+        Console.WriteLine($"\nValor Errado, {numero1} + {numero2} = {soma}\n");
+        if (sucesso == false)
         {
-            validEntry = true;
-        }
-        else
-        {
-            Console.WriteLine("Your input is invalid, please try again.");
+            encerrar1 = true;
         }
     }
-} while (validEntry == false);
+
+} while (encerrar1 == false);
+
+Console.WriteLine($"Fim do programa");
 
 
 
